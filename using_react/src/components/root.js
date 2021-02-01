@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ArticleList from "./articleList";
-import Header from "./header";
+import ArticleList from "@components/articleList";
+import Header from "@components/header";
 const RootComponent = () => {
   const [category, setCategory] = useState("home");
 

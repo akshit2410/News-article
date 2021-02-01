@@ -1,6 +1,6 @@
-import RootComponent from "./components/root";
-import "./app.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import RootComponent from "@components/root";
+import "@styles/app.css";
+import "bootstrap/dist/css/bootstrap.css";
 function App() {
   return (
     <>

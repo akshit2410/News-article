@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Article from "./article";
-
+import Article from "@components/article";
+const {REACT_APP_NYTIMES_API_KEY} = process.env
 const ArticleList = ({ category }) => {
   const [data, setData] = useState(null);
   useEffect(() => {
@@ -9,7 +9,7 @@ const ArticleList = ({ category }) => {
       .get(
         "https://api.nytimes.com/svc/topstories/v2/" +
           category +
-          ".json?api-key=UUwhUqGgdgeTibFTSIRQGhhTZN4zVP9X"
+          `.json?api-key=${REACT_APP_NYTIMES_API_KEY}`
       )
       .then((res) => {
         setData(res.data);
